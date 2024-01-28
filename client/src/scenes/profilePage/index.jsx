@@ -16,10 +16,13 @@ const ProfilePage = () => {
 
   const getUser = async () => {
     try {
-      const response = await fetch(`http://localhost:7777/users/${userId}`, {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API}/users/${userId}`,
+        {
+          method: "GET",
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       const data = await response.json();
       setUser(data);
     } catch (error) {
