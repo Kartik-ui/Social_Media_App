@@ -1,7 +1,10 @@
 # Node modules
 node_modules/
 
-# Build output
+# Build output for React
+build/
+
+# Build output for Node.js
 dist/
 build/
 
